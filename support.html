@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tangem Wallet Support | Get Help with Tangem Wallet</title>
+    <meta name="description" content="Official Tangem Wallet support. Get help with wallet setup, troubleshooting, and technical issues. Expert support available 24/7 for all Tangem Wallet users.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: #ffffff;
+            padding: 16px 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tangem-logo img {
+            height: 150px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .tangem-logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .header-phone {
+            background: #2d6ab7;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s ease;
+        }
+
+        .header-phone:hover {
+            background: #1c4a7d;
+        }
+
+        .breadcrumb {
+            background: #E9EBEE;
+            padding: 16px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .breadcrumb-text {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .breadcrumb-link {
+            color: #2d6ab7;
+            text-decoration: none;
+        }
+
+        .breadcrumb-link:hover {
+            text-decoration: underline;
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #2d6ab7, #4a8dd9);
+            color: white;
+            padding: 100px 24px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            background: #ffffff;
+            color: #2d6ab7;
+            padding: 16px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s ease, background 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-4px);
+            background: #1c4a7d;
+            color: white;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .support-info {
+            background: #ffffff;
+            padding: 60px 24px;
+            text-align: center;
+        }
+
+        .support-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .support-item {
+            background: #f4f9fc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .support-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .support-icon {
+            width: 60px;
+            height: 60px;
+            background: #2d6ab7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .support-text {
+            font-weight: 600;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .footer {
+            background: #2d6ab7;
+            color: white;
+            padding: 40px 0 24px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #B3B3B3;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-size: 14px;
+            color: #B3B3B3;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-legal a {
+            color: #B3B3B3;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-legal a:hover {
+            color: white;
+        }
+
+        .sticky-support {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #2d6ab7;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+            z-index: 1000;
+        }
+
+        .sticky-support:hover {
+            background: #1c4a7d;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-cta {
+                font-size: 14px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="tangem-logo">
+                <img src="https://ml-eu.globenewswire.com/Resource/Download/4c36cc01-b6e2-40ed-a99f-858dc834c1c1" alt="Tangem Wallet Logo">
+            </a>
+            <a href="tel:+1-808-451-7477" class="header-phone">
+                📞 Call Tangem Wallet Support: +1-808-451-7477
+            </a>
+        </div>
+    </header>
+    
+    <nav class="breadcrumb">
+        <div class="breadcrumb-container">
+            <span class="breadcrumb-text">
+                <a href="#" class="breadcrumb-link">Home</a> > 
+                <a href="#" class="breadcrumb-link">Support</a> > 
+                Tangem Wallet Help
+            </span>
+        </div>
+    </nav>
+    
+    <section class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">Get help with Tangem Wallet</h1>
+            <p class="hero-subtitle">Find solutions, troubleshoot issues, or contact our support team for personalized assistance</p>
+            <a href="tel:+1-808-451-7477" class="hero-cta">
+                📞 Call Support Now
+            </a>
+        </div>
+    </section>
+    
+    <section class="support-info">
+        <div class="support-container">
+            <div class="support-item">
+                <div class="support-icon">💬</div>
+                <span class="support-text">24/7 Support</span>
+            </div>
+            <div class="support-item">
+                <div class="support-icon">🔧</div>
+                <span class="support-text">Expert Technicians</span>
+            </div>
+            <div class="support-item">
+                <div class="support-icon">⚡</div>
+                <span class="support-text">Quick Resolution</span>
+            </div>
+            <div class="support-item">
+                <div class="support-icon">📞</div>
+                <span class="support-text">Phone & Chat Support</span>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Privacy & Safety</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Tangem Wallet Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Tangem Wallet Cards</a></li>
+                        <li><a href="#">Tangem Wallet Ring</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+1-808-451-7477">📞 +1-808-451-7477</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Email Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copy">
+                    © 2025 Tangem Wallet, Inc. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="tel:+1-808-451-7477" class="sticky-support">
+        📞 Call Support
+    </a>
+</body>
+</html>
